@@ -1,0 +1,50 @@
+{
+  "name": "codebase-oracle",
+  "version": "1.0.0",
+  "description": "Local-first codebase knowledge graph with ontology-driven impact analysis",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/api/server.js",
+    "dev": "tsx watch src/api/server.ts",
+    "ingest": "tsx src/cli.ts ingest",
+    "query": "tsx src/cli.ts query",
+    "impact": "tsx src/cli.ts impact",
+    "frontend": "cd frontend && npm run dev",
+    "setup": "npm install && cd frontend && npm install",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "chokidar": "^4.0.0",
+    "commander": "^12.1.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.0",
+    "glob": "^11.0.0",
+    "kuzu": "^0.7.1",
+    "ora": "^8.1.0",
+    "ts-morph": "^24.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
